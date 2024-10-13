@@ -1,0 +1,114 @@
+.italic {
+  font-style: italic;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  cursor: none;
+  font-family: "dashiell-fine", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+a {
+  text-decoration: none;
+  color: #0D0A0B;
+}
+
+body {
+  width: 100%;
+  height: 100dvh;
+  display: flex;
+  background: #0D0A0B;
+  flex-direction: column;
+  padding: 0.625rem 0.625rem 0 0.625rem;
+}
+
+.scroll {
+  width: 100%;
+  height: 84vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  overflow-y: scroll;
+  padding: 1rem;
+  gap: 1rem;
+}
+.scroll .aboutme {
+  color: #D9C9BA;
+  font-size: 3rem;
+  font-family: "rafaella", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  text-align: center;
+  margin-block-end: 1rem;
+}
+.scroll .part {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-block-end: 1rem;
+}
+.scroll .part .wrap {
+  width: 80%;
+  border-radius: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-block-end: 1rem;
+  background: #D9C9BA;
+  padding: 1rem;
+  transition: all 200ms ease-in-out;
+}
+.scroll .part .wrap:hover {
+  transform: scale(0.99);
+  box-shadow: 0 0 15px rgb(172, 172, 172);
+}
+.scroll .part .wrap .head {
+  color: #0D0A0B;
+  font-size: 2rem;
+  font-family: "dashiell-fine", serif;
+  font-weight: 800;
+  font-style: normal;
+  text-align: center;
+  margin-block-end: 1rem;
+}
+.scroll .part .wrap .text {
+  color: #0D0A0B;
+  font-size: 1.5rem;
+  font-family: "dashiell-fine", serif;
+  font-weight: 400;
+  font-style: normal;
+  text-align: center;
+  margin-block-end: 1rem;
+}
+.scroll .part .imgwrap {
+  width: 20%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.scroll .part .imgwrap .icon {
+  color: #A6998A;
+  font-size: 9rem;
+}
+.scroll .education {
+  flex-direction: row-reverse;
+}
+.scroll .personal {
+  flex-direction: row-reverse;
+}
+
+@media screen and (max-width: 780px) {
+  .fa-solid {
+    display: none;
+  }
+}
+
+/*# sourceMappingURL=about.css.map */

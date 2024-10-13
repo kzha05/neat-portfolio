@@ -1,0 +1,41 @@
+<style>
+	.template-main {
+		display: grid;
+		grid-template-columns: repeat(20, 1fr);
+		grid-template-rows: repeat(11, 1fr);
+		grid-template-areas:
+        "name name name name name name icon icon icon icon bio bio bio bio bio bio bio bio bio bio"
+        "name name name name name name icon icon icon icon bio bio bio bio bio bio bio bio bio bio"
+        "name name name name name name icon icon icon icon bio bio bio bio bio bio bio bio bio bio"
+        "name name name name name name icon icon icon icon bio bio bio bio bio bio bio bio bio bio"
+        "name name name name name name icon icon icon icon bio bio bio bio bio bio bio bio bio bio"
+        "name name name name name name icon icon icon icon bio bio bio bio bio bio bio bio bio bio"
+        "name name name name name name icon icon icon icon bio bio bio bio bio bio bio bio bio bio"
+        "name name name name name name work work work work work contactme contactme contactme about about about about about about"
+        "name name name name name name work work work work work contactme contactme contactme about about about about about about"
+        "links links links links links links work work work work work contactme contactme contactme about about about about about about"
+        "links links links links links links work work work work work contactme contactme contactme about about about about about about";
+	}
+</style>
+
+<main class="template-main">
+	<figure class="block name-block"></figure>
+	<figure class="block links-block">
+
+	</figure>
+	<div class="block imgwrap">
+		<img class="big-img" src="../img/me.webp" alt="Me">
+	</div>
+	<div class="block title-block">
+
+	</div>
+	<button data-pagecomponent="app.html" class="block work">
+		<i>Home</i>
+	</button>
+	<button data-pagecomponent="template.html" class="block contact">
+
+	</button>
+	<button data-pagecomponent="template.html" class="block about">
+
+	</button>
+</main>

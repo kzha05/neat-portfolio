@@ -1,0 +1,50 @@
+<style>
+	.app-main {
+		display: grid;
+		grid-template-columns: repeat(20, 1fr);
+		grid-template-rows: repeat(11, 1fr);
+		grid-template-areas:
+        "name name name name name name icon icon icon icon bio bio bio bio bio bio bio bio bio bio"
+        "name name name name name name icon icon icon icon bio bio bio bio bio bio bio bio bio bio"
+        "name name name name name name icon icon icon icon bio bio bio bio bio bio bio bio bio bio"
+        "name name name name name name icon icon icon icon bio bio bio bio bio bio bio bio bio bio"
+        "name name name name name name icon icon icon icon bio bio bio bio bio bio bio bio bio bio"
+        "name name name name name name icon icon icon icon bio bio bio bio bio bio bio bio bio bio"
+        "name name name name name name icon icon icon icon bio bio bio bio bio bio bio bio bio bio"
+        "name name name name name name work work work work work contactme contactme contactme about about about about about about"
+        "name name name name name name work work work work work contactme contactme contactme about about about about about about"
+        "links links links links links links work work work work work contactme contactme contactme about about about about about about"
+        "links links links links links links work work work work work contactme contactme contactme about about about about about about";
+	}
+</style>
+
+<main class="app-main">
+	<figure class="block name-block">Diya jawalapersad</figure>
+	<figure class="block links-block">
+		<a class="link" href="https://www.linkedin.com/in/diya-jawalapersad-a32092277/" target="_blank">LINKEDIN</a>
+		<a class="link" href="https://github.com/kzha05" target="_blank">GITHUB</a>
+		<a class="link" href="/files/CV-diya.docx" download>RESUME</a>
+	</figure>
+	<div class="block imgwrap">
+		<img class="big-img" src="./img/me.webp" alt="">
+	</div>
+	<div class="block title-block">An aspiring web developer dedicated to crafting
+		<span class="italic">beautiful</span> and <span class="italic">accessible</span> websites.
+	</div>
+	<button data-pagecomponent="work.html" class="block work">
+		<div class="first1">
+			<span class="see">See my</span> <i class="italic1">work</i>
+		</div>
+		<p class="second1">&#8594;</p>
+	</button>
+	<button data-pagecomponent="contact.html" class="block contact">
+		<div class="first">
+			<p>Contact</p> <span class="italic1">me</span>
+		</div>
+		<p class="second"><i class="fa-solid fa-envelope"></i></p>
+	</button>
+	<button data-pagecomponent="about.html" class="block about">
+		My name is Diya Jawalapersad. I’m an aspiring web developer
+		with a passion for creating websites. My goal ... <span class="italic2">Read more</span>
+	</button>
+</main>

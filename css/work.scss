@@ -1,0 +1,153 @@
+@mixin fcc() {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin Dash() {
+  font-family: "dashiell-fine", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+@mixin Dash-bold() {
+  font-family: "dashiell-fine", serif;
+  font-weight: 800;
+  font-style: normal;
+}
+
+@mixin Rafael() {
+  font-family: "rafaella", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+$black: #0D0A0B;
+$grey: #4A4B46;
+$brown: #26200C;
+$darkbeige: #A6998A;
+$beige: #D9C9BA;
+$gold: #8d7800;
+$darkgold: #80743f;
+
+body {
+  width: 100%;
+  height: 100dvh;
+  display: flex;
+  background: $black;
+  flex-direction: column;
+  padding: 0.625rem;
+}
+
+.work-scroll {
+  width: 100%;
+  height: 84vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  overflow-y: scroll;
+  padding: 1rem;
+  gap: 1rem;
+
+  .mywork {
+    color: $beige;
+    font-size: 3rem;
+    @include Rafael();
+    text-align: center;
+    margin-block-end: 1rem;
+  }
+
+  .projects {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5em;
+
+    .work1 {
+      @include fcc();
+      flex-direction: column;
+      border-radius: 1rem;
+      width: 100%;
+      height: 25rem;
+      background: $beige;
+      overflow: hidden;
+      transition: height 300ms ease-in-out, box-shadow 300ms ease-in-out;
+      position: relative;
+      padding: 1rem 0;
+
+      &:hover {
+        height: 30rem;
+        box-shadow: 0 0 15px $darkbeige;
+      }
+
+      .work-img-wrap {
+        width: 100%;
+        height: 12rem;
+        overflow: hidden;
+
+        .work-img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+
+      .work-text {
+        width: 100%;
+        padding: 0.5rem;
+        color: $black;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        height: auto; /* Fixed height if needed */
+        transition: none; /* Prevent any transitions on hover */
+      }
+
+      .desc-text {
+        width: 100%;
+        padding: 0.5rem;
+        background: linear-gradient($beige, $darkbeige);
+        color: white;
+        opacity: 0; /* Hidden by default */
+        height: 0;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        text-align: center;
+        transition: opacity 300ms ease-in-out, height 300ms ease-in-out;
+        overflow: hidden;
+      }
+
+      &:hover .desc-text {
+        opacity: 1; /* Make visible on hover */
+        height: 5rem; /* Reveal part of lorem ipsum */
+      }
+
+      &hover .work-img-wrap{
+        height: 18rem;
+      }
+
+      .work-link {
+        color: $gold;
+        font-size: 1rem;
+        @include Dash-bold();
+        transition: color 0.3s ease;
+
+        &:hover {
+          color: $darkgold;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 780px) {
+  .work-scroll {
+    .projects {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+}

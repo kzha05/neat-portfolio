@@ -1,0 +1,140 @@
+@mixin fcc() {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin Dash() {
+  font-family: "dashiell-fine", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+@mixin Dash-bold() {
+  font-family: "dashiell-fine", serif;
+  font-weight: 800;
+  font-style: normal;
+}
+
+@mixin Rafael() {
+  font-family: "rafaella", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.italic {
+  font-style: italic;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  cursor:none;
+  @include Dash();
+}
+
+a {
+  text-decoration: none;
+  color: #0D0A0B;
+}
+
+$black: #0D0A0B;
+$grey: #4A4B46;
+$brown: #26200C;
+$darkbeige: #A6998A;
+$beige: #D9C9BA;
+$gold: #8d7800;
+$darkgold: #80743f;
+
+body {
+  width: 100%;
+  height: 100dvh;
+  display: flex;
+  background: $black;
+  flex-direction: column;
+  padding: 0.625rem 0.625rem 0 0.625rem;
+}
+
+.scroll {
+  width: 100%;
+  height: 84vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  overflow-y: scroll;
+  padding: 1rem;
+  gap: 1rem;
+
+  .aboutme {
+    color: $beige;
+    font-size: 3rem;
+    @include Rafael();
+    text-align: center;
+    margin-block-end: 1rem;
+  }
+
+  .part{
+    width: 100%;
+    @include fcc();
+    margin-block-end: 1rem;
+
+    .wrap{
+      width: 80%;
+      border-radius: 1rem;
+      @include fcc();
+      flex-direction: column;
+      margin-block-end: 1rem;
+      background: $beige;
+      padding: 1rem;
+      transition: all 200ms ease-in-out;
+
+      &:hover {
+        transform: scale(0.99);
+        box-shadow: 0 0 15px rgb(172, 172, 172);
+      }
+
+      .head {
+        color: $black;
+        font-size: 2rem;
+        @include Dash-bold();
+        text-align: center;
+        margin-block-end: 1rem;
+      }
+
+      .text {
+        color: $black;
+        font-size: 1.5rem;
+        @include Dash();
+        text-align: center;
+        margin-block-end: 1rem;
+      }
+    }
+
+    .imgwrap{
+      width: 20%;
+      height: 100%;
+      @include fcc();
+
+      .icon{
+        color: $darkbeige;
+        font-size: 9rem;
+      }
+    }
+  }
+
+  .education{
+    flex-direction: row-reverse;
+  }
+
+  .personal{
+    flex-direction: row-reverse;
+  }
+}
+
+@media screen and (max-width: 780px) {
+  .fa-solid{
+    display: none;
+  }
+}

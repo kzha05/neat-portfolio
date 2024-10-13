@@ -1,0 +1,108 @@
+@mixin fcc() {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin Dash() {
+  font-family: "dashiell-fine", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+@mixin Dash-bold() {
+  font-family: "dashiell-fine", serif;
+  font-weight: 800;
+  font-style: normal;
+}
+
+@mixin Rafael() {
+  font-family: "rafaella", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  @include Dash();
+}
+
+a {
+  text-decoration: none;
+  color: #0D0A0B;
+}
+
+$black: #0D0A0B;
+$grey: #4A4B46;
+$brown: #26200C;
+$darkbeige: #A6998A;
+$beige: #D9C9BA;
+$gold: #b99d00;
+$darkgold: #80743f;
+
+body {
+  width: 100%;
+  height: 100dvh; // Keep full viewport height
+  display: flex;
+  background: $black;
+  overflow: hidden; // Prevent scrolling
+  flex-direction: column;
+  padding: 0.625rem; // This padding should stay within the 100vh space
+}
+
+.welcome-wrapper {
+  background: $black;
+  width: 100%;
+  height: 100%;
+  max-height: 100%;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 0.25rem;
+
+  .contact-info{
+    width: 40%;
+    height: 78%;
+    @include fcc();
+    flex-direction: column;
+    background: $beige;
+    color: $black;
+    border-radius: 1rem;
+    padding: 3.125rem;
+
+    .head{
+      width: 100%;
+      height: 40%;
+      color: $black;
+      font-size: 3.125rem;
+      @include Rafael();
+      text-align: center;
+      margin-block-end: 0.625rem;
+      @include fcc();
+    }
+
+    .textwrap{
+      width: 100%;
+      height: 60%;
+      @include fcc();
+      flex-direction: column;
+      margin-block-end: 0.625rem;
+      text-align: left;
+      font-size: 1.875rem;
+      gap: 0.625rem;
+
+      .link-name{
+        transition: all 0.3s ease;
+      }
+
+      .link-name:hover{
+        color: $gold;
+      }
+    }
+  }
+}
